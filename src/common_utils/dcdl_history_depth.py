@@ -71,7 +71,7 @@ def download_data_history_depth(symbol, cookie, save_path, mode = 'ok-bn'):
 
 
 if __name__ == '__main__':
-    from CONFIG import *
+    from common_utils.CONFIG import *
     key = 'YNW6YKQCA2YGAJVRZBREJ34BSI'
     password = cal_google_code(key)
     username = 'ray_xu'  # dcdl用户名

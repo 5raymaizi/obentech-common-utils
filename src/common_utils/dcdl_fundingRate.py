@@ -1,21 +1,18 @@
 #!/usr/bin/env python3
 import csv
-import datetime
-from dateutil.relativedelta import relativedelta
+# from dateutil.relativedelta import relativedelta
 import requests
 from requests.auth import HTTPBasicAuth
 import os
 import hmac
-import math
 import base64
 import struct
 import hashlib
 import time
-from contextlib import closing
-from zipfile import ZipFile
-import pandas as pd
-import shutil
-from zipfile import BadZipFile
+# from contextlib import closing
+# from zipfile import ZipFile
+# import pandas as pd
+# from zipfile import BadZipFile
 
 
 def get_cookie(_url: str, _username: str, _password: str):
@@ -77,7 +74,7 @@ def download_funding_rate_data(symbol, exchange, cookie, save_path):
 
 
 if __name__ == '__main__':
-    from CONFIG import *
+    from common_utils.CONFIG import *
     key = 'YNW6YKQCA2YGAJVRZBREJ34BSI'
     password = cal_google_code(key)
     username = 'ray_xu'  # dcdl用户名
@@ -103,12 +100,12 @@ if __name__ == '__main__':
     # binance_symbols = ['CYS','DASH','JELLYJELLY','JASMY','ASTR','XMR','MAGMA','AVNT','RENDER','BLUR','IMX','COMP','SYRUP','BB','AXS']
     # binance_symbols = ['LYN','ALCH','JELLYJELLY','CYS','STABLE','JASMY','GLM','AVNT','ZRO','BCH','GOAT','MEME','COMP','KMNO','CAKE','ASTR','EIGEN','KAIA'] 
     binance_symbols = ['ORDER', 'JTO', 'ID', 'TWT', 'BIGTIME', 'ASTR', 'ROSE', 'SYRUP', 'STG', 'BAT', 'POL','LYN','S','B2','AERO','SQD','FOGO']
-    binance_symbols = ['ATH','VVV']
+    binance_symbols = ['IP','WLD','SPACE','WLFI']
     okx_symbols = binance_symbols
     bybit_symbols = symbols_bybit  # Only symbols in the okx-bybit list for Bybit
     # bybit_symbols = ['CHILLGUY','MEME','WIF','ATH','SYRUP','BB','KAIA','APE','IRYS','ALCH','STABLE','ADA','ASTER','SAPIEN']    
     bybit_symbols =  ['ORDER', 'JTO', 'ID', 'TWT', 'BIGTIME', 'ASTR', 'ROSE', 'SYRUP', 'STG', 'BAT', 'POL','LYN','S','B2','AERO','SQD','FOGO']
-    bybit_symbols = ['VVV']
+    bybit_symbols = ['IP','WLD','SPACE','WLFI']
     # Save path configuration
     save_path = f'{base_dir}/Obentech/fundingRateData'
     failed_files = set()
@@ -125,26 +122,26 @@ if __name__ == '__main__':
             failed_files.add(f"binance_{symbol}")
     
     # # Download OKX data
-    # print("\n=== Downloading OKX data ===")
-    # for symbol in okx_symbols:
-    #     try:
-    #         status = download_funding_rate_data(symbol, 'okx', cookie, save_path)
-    #         if status != 200:
-    #             failed_files.add(f"okx_{symbol}")
-    #     except Exception as e:
-    #         print(f"Error downloading okx data for {symbol}: {e}")
-    #         failed_files.add(f"okx_{symbol}")
+    print("\n=== Downloading OKX data ===")
+    for symbol in okx_symbols:
+        try:
+            status = download_funding_rate_data(symbol, 'okx', cookie, save_path)
+            if status != 200:
+                failed_files.add(f"okx_{symbol}")
+        except Exception as e:
+            print(f"Error downloading okx data for {symbol}: {e}")
+            failed_files.add(f"okx_{symbol}")
     
     # Download Bybit data
-    print("\n=== Downloading Bybit data ===")
-    for symbol in bybit_symbols:
-        try:
-            status = download_funding_rate_data(symbol, 'bybit', cookie, save_path)
-            if status != 200:
-                failed_files.add(f"bybit_{symbol}")
-        except Exception as e:
-            print(f"Error downloading bybit data for {symbol}: {e}")
-            failed_files.add(f"bybit_{symbol}")
+    # print("\n=== Downloading Bybit data ===")
+    # for symbol in bybit_symbols:
+    #     try:
+    #         status = download_funding_rate_data(symbol, 'bybit', cookie, save_path)
+    #         if status != 200:
+    #             failed_files.add(f"bybit_{symbol}")
+    #     except Exception as e:
+    #         print(f"Error downloading bybit data for {symbol}: {e}")
+    #         failed_files.add(f"bybit_{symbol}")
     
     # Output summary
     if failed_files:
