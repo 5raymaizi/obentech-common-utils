@@ -1,7 +1,12 @@
 import pandas as pd
 import numpy as np
 import re
-import CONFIG as C
+try:
+    # 情况1：作为包安装时（本地 pip install -e）
+    from . import CONFIG as C
+except ImportError:
+    # 情况2：把 utils_Sep.py 和 CONFIG.py 放同目录直接跑（服务器拷贝方式）
+    import CONFIG as C
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 import pickle

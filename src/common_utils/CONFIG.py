@@ -45,8 +45,8 @@ if IS_SERVER:
 
     MINUTE_DEPTH_DIR = '/data_file/subscribe_to_csv/min_depth_hist/'    
 
-    os.makedirs(REPORT_BASE_DIR, exist_ok=True)
-    os.makedirs(LOG_BASE_DIR, exist_ok=True)
+    # os.makedirs(REPORT_BASE_DIR, exist_ok=True)
+    # os.makedirs(LOG_BASE_DIR, exist_ok=True)
 
 else:
 
@@ -69,8 +69,8 @@ else:
 
     MINUTE_DEPTH_DIR = f"{base_dir}/Obentech/historyDepthData/"
 
-    os.makedirs(REPORT_BASE_DIR, exist_ok=True)
-    os.makedirs(LOG_BASE_DIR, exist_ok=True)
+    # os.makedirs(REPORT_BASE_DIR, exist_ok=True)
+    # os.makedirs(LOG_BASE_DIR, exist_ok=True)
 
 tz_bj = pytz.timezone("Asia/Shanghai") # 默认使用北京时间
 now_bj = datetime.now(tz_bj) # eg: datetime.datetime(2025, 12, 19, 8, 7, 23, 854260, tzinfo=<DstTzInfo 'Asia/Shanghai' CST+8:00:00 STD>)
