@@ -89,7 +89,7 @@ if __name__ == '__main__':
     username = 'ray_xu'  # dcdl用户名
     cookie = get_cookie('https://dcdl.digifinex.org/', username, password)
     mode = 'binance-okx'
-    date = '20260214'
+    date = '20260219'
     base_dir = get_base_dir()
     save_path = f'{base_dir}/Obentech/scored_df/{path_mapping[mode]}/{date}/'
     failed_files = set()
