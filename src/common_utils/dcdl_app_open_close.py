@@ -16,7 +16,7 @@ from zipfile import ZipFile
 import pandas as pd
 import shutil
 from zipfile import BadZipFile
-from CONFIG import * 
+from common_utils.CONFIG import * 
 
 def get_cookie(_url: str, _username: str, _password: str):
     _response = requests.post(url=_url, auth=HTTPBasicAuth(_username, _password), allow_redirects=False, stream=True)
@@ -74,8 +74,8 @@ if __name__ == '__main__':
 
     symbol_list = ['ETH']
     env_list = ['manager_dcpro1','manager_dcpro2','manager_dcpro3','manager_dcpro4','manager_dcpro5','manager_dcpro7', 'manager_dcpro8','manager_dcpro9','manager_dcpro10','manager_dcpro11', 'manager_dcpro12','manager_dcpro13','manager_dcpro15','manager_dcpro16','manager_dcpro17','manager_dctest4','manager_maker_dc_pmpro_test','manager_dcpro24','manager_dcpro25','manager_dcpro26','manager_dcpro27','manager_dcpro29']
-    # env_list = ['manager_dcpro1','manager_dcpro2','manager_dcpro3','manager_dcpro4','manager_dcpro5']
-    env_list = ['manager_maker_dc_pmpro_test']
+    env_list = ['manager_dcpro2','manager_dcpro3','manager_dcpro4','manager_dcpro5']
+    # env_list = ['manager_maker_dc_pmpro_test','manager_dcpro1']
     suffix_list = ['open','close']
     # Save path configuration
     save_path = f'{base_dir}/Obentech/cfdcappData'
