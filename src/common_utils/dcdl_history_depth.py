@@ -77,7 +77,7 @@ if __name__ == '__main__':
     username = 'ray_xu'  # dcdl用户名
     cookie = get_cookie('https://dcdl.digifinex.org/', username, password)
 
-    symbol_list =['ATH','VVV']
+    symbol_list =['POWER']
     base_dir = get_base_dir()
     save_path = f'{base_dir}/Obentech/historyDepthData'
     failed_files = set()

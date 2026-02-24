@@ -100,12 +100,12 @@ if __name__ == '__main__':
     # binance_symbols = ['CYS','DASH','JELLYJELLY','JASMY','ASTR','XMR','MAGMA','AVNT','RENDER','BLUR','IMX','COMP','SYRUP','BB','AXS']
     # binance_symbols = ['LYN','ALCH','JELLYJELLY','CYS','STABLE','JASMY','GLM','AVNT','ZRO','BCH','GOAT','MEME','COMP','KMNO','CAKE','ASTR','EIGEN','KAIA'] 
     binance_symbols = ['ORDER', 'JTO', 'ID', 'TWT', 'BIGTIME', 'ASTR', 'ROSE', 'SYRUP', 'STG', 'BAT', 'POL','LYN','S','B2','AERO','SQD','FOGO']
-    binance_symbols = ['MORPHO','AEVO','GMX','A']
+    binance_symbols = ['POWER']
     okx_symbols = binance_symbols
     bybit_symbols = symbols_bybit  # Only symbols in the okx-bybit list for Bybit
     # bybit_symbols = ['CHILLGUY','MEME','WIF','ATH','SYRUP','BB','KAIA','APE','IRYS','ALCH','STABLE','ADA','ASTER','SAPIEN']    
     bybit_symbols =  ['ORDER', 'JTO', 'ID', 'TWT', 'BIGTIME', 'ASTR', 'ROSE', 'SYRUP', 'STG', 'BAT', 'POL','LYN','S','B2','AERO','SQD','FOGO']
-    bybit_symbols = ['MORPHO','AEVO','GMX','A']
+    bybit_symbols = ['POWER']
     # Save path configuration
     save_path = f'{base_dir}/Obentech/fundingRateData'
     failed_files = set()
