@@ -88,8 +88,8 @@ if __name__ == '__main__':
     password = cal_google_code(key)
     username = 'ray_xu'  # dcdl用户名
     cookie = get_cookie('https://dcdl.digifinex.org/', username, password)
-    mode = 'binance-bybit'
-    date = '20260223'
+    mode = 'binance-okx'
+    date = '20260226'
     base_dir = get_base_dir()
     save_path = f'{base_dir}/Obentech/scored_df/{path_mapping[mode]}/{date}/'
     failed_files = set()

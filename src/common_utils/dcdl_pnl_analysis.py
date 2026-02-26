@@ -63,7 +63,7 @@ def download_data(suffix, cookie, save_path):
 
 
 if __name__ == '__main__':
-    from CONFIG import *
+    from common_utils.CONFIG import *
     key = 'YNW6YKQCA2YGAJVRZBREJ34BSI'
     password = cal_google_code(key)
     username = 'ray_xu'  # dcdl用户名
@@ -71,7 +71,7 @@ if __name__ == '__main__':
 
     sufix_list = ['100WU','dcpro2','dcpro3','dcpro4','dcpro5','dcpro6','dcpro7', 'dcpro8','dcpro9','dcpro10','dcpro11', 'dcpro12','dcpro13','dcpro14','dcpro15','dcpro16','dcpro17','10WU','pmtest2','pmtest4']
     # sufix_list = ['dcpro4','dcpro5','dcpro6','dcpro7', 'dcpro8','dcpro9','dcpro10','dcpro11', 'dcpro12','dcpro13','dcpro14','dcpro15','dcpro16','dcpro17']
-    sufix_list = ['pmtest2']
+    sufix_list = ['10WU']
     # Save path configuration
     base_dir = get_base_dir()
     save_path = f'{base_dir}/Obentech/pnl_analysis'
