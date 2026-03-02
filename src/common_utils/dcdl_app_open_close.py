@@ -72,7 +72,7 @@ if __name__ == '__main__':
     cookie = get_cookie('https://dcdl.digifinex.org/', username, password)
     base_dir = get_base_dir()
 
-    symbol_list = ['PIPPIN']
+    symbol_list = ['ETH']
     env_list = ['manager_dcpro1','manager_dcpro2','manager_dcpro3','manager_dcpro4','manager_dcpro5','manager_dcpro7', 'manager_dcpro8','manager_dcpro9','manager_dcpro10','manager_dcpro11', 'manager_dcpro12','manager_dcpro13','manager_dcpro15','manager_dcpro16','manager_dcpro17','manager_dctest4','manager_maker_dc_pmpro_test','manager_dcpro24','manager_dcpro25','manager_dcpro26','manager_dcpro27','manager_dcpro29']
     env_list = ['manager_dcpro2','manager_dcpro3','manager_dcpro4','manager_dcpro5']
     env_list = ['manager_maker_dc_pmpro_test']
