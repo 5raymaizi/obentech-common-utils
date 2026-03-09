@@ -12,7 +12,7 @@
 
 ### 代码目录
 - 主要代码位置: `/Users/rayxu/Documents/Obentech_code`
-- 里面有两个项目文件夹（AM，CF）和一个工具函数文件夹（COMMON_UTILS/src/common_utils下面)
+- 里面有两个项目文件夹（AM，CF）和一个工具函数文件夹（COMMON_UTILS/src/common_utils下面)，还有一个小写的cf文件夹，放的是实盘的代码
 - 语言: Python
 
 ## 项目说明

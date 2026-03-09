@@ -69,8 +69,8 @@ def read_cf_depth(ccy, start_date, end_date, exchange1, market1, exchange2, mark
         market1_depth_path = f'/Volumes/T7/Obentech/dcdlData/{exchange1}/books/{ccy}/{market1}'
         market2_depth_path = f'/Volumes/T7/Obentech/dcdlData/{exchange2}/books/{ccy}/{market2}'
     elif data_source == 'nuts_mm':
-        market1_depth_path = f'/Volumes/T7/data/{exchange1}/perp/books/{ccy}'
-        market2_depth_path = f'/Volumes/T7/data/{exchange2}/perp/books/{ccy}'
+        market1_depth_path = f'/Volumes/T7/Obentech/data/{exchange1}/perp/books/{ccy}'
+        market2_depth_path = f'/Volumes/T7/Obentech/data/{exchange2}/perp/books/{ccy}'
     # if data_source == 'nuts_am_on_mac':
     #     market1_depth_path = f'/Users/rayxu/Downloads/nuts_am/data/{exchange1}/perp/books/{ccy}'
     #     market2_depth_path = f'/Users/rayxu/Downloads/nuts_am/data/{exchange2}/perp/books/{ccy}'

@@ -83,8 +83,8 @@ if __name__ == '__main__':
     base_dir = get_base_dir()
 
     # ============ 配置区 ============
-    mode = 'binance-bybit'  # 'binance-okx' or 'binance-bybit'
-    symbol_list = ['ESP']
+    mode = 'binance-okx'  # 'binance-okx' or 'binance-bybit'
+    symbol_list = ['POWER']
     # ================================
 
     mode_to_exchanges = {

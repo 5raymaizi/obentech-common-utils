@@ -71,7 +71,7 @@ if __name__ == '__main__':
 
     sufix_list = ['100WU','dcpro2','dcpro3','dcpro4','dcpro5','dcpro6','dcpro7', 'dcpro8','dcpro9','dcpro10','dcpro11', 'dcpro12','dcpro13','dcpro14','dcpro15','dcpro16','dcpro17','10WU','pmtest2','pmtest4']
     # sufix_list = ['dcpro4','dcpro5','dcpro6','dcpro7', 'dcpro8','dcpro9','dcpro10','dcpro11', 'dcpro12','dcpro13','dcpro14','dcpro15','dcpro16','dcpro17']
-    sufix_list = ['10WU']
+    sufix_list = ['10WU','100WU']
     # Save path configuration
     base_dir = get_base_dir()
     save_path = f'{base_dir}/Obentech/pnl_analysis'
